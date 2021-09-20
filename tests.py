@@ -95,7 +95,7 @@ class CupcakeViewsTestCase(TestCase):
 
             # don't know what ID we'll get, make sure it's an int & normalize
             self.assertIsInstance(data['cupcake']['id'], int)
-            del data['cupcake']['id']
+            del data['cupcake']['id'] #TODO: This shouldn't work but our test passed. Why is that?
 
             self.assertEqual(data, {
                 "cupcake": {
